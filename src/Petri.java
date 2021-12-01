@@ -39,4 +39,12 @@ public class Petri {
 
         return retour.toString();
     }
+
+    public ArrayList<Integer> getListPlaces() {
+        return listPlaces;
+    }
+
+    public ArrayList<Transition> getListTransitions() {
+        return listTransitions;
+    }
 }
