@@ -11,11 +11,17 @@ public class TestPetri {
 
     Petri p;
 
+    Place p1 = new Place(1,0);
+    Place p2 = new Place(1,0);
+    Place p3 = new Place(1,0);
+    Place p4 = new Place(1,0);
+
 
     @Before
     public void before(){
-        ArrayList<Integer> listPlaces = new ArrayList(){{
-            add(1); add(3); add(2);  add(4); add(1);
+
+        ArrayList<Place> listPlaces = new ArrayList(){{
+            add(p1); add(p2); add(p3);  add(p4);
         }};
 
         Transition t1 = new Transition(1, new ArrayList(){{add(1);}}, new ArrayList(){{add(2);add(3);}});
@@ -34,13 +40,14 @@ public class TestPetri {
     @Test
     public void testRemoveDuplicatesAndSort(){
         System.out.println(p.toString());
-        ArrayList<Integer> listPlaces = new ArrayList(){{
-            add(1);  add(2);add(3);  add(4);
+        ArrayList<Place> listPlaces = new ArrayList(){{
+            add(p1);  add(p2);add(p3);  add(p4);
         }};
-        ArrayList<Integer> lp = p.getListPlaces();
+        ArrayList<Place> lp = p.getListPlaces();
         Assert.assertEquals(lp.size(),listPlaces.size());
         for (int i = 0; i < lp.size(); i++) {
-            Assert.assertEquals(lp.get(i),listPlaces.get(i));
+            Assert.assertEquals(lp.get(i).getNum(),listPlaces.get(i).getNum());
+            Assert.assertEquals(lp.get(i).getNbJetons(),listPlaces.get(i).getNbJetons());
         }
     }
 }

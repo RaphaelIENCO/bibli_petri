@@ -3,8 +3,14 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> listPlaces = new ArrayList(){{
-           add(1); add(2); add(3); add(4);
+        Place p1 = new Place(1,0);
+        Place p2 = new Place(1,0);
+        Place p3 = new Place(1,0);
+        Place p4 = new Place(1,0);
+
+
+        ArrayList<Place> listPlaces = new ArrayList(){{
+           add(p1); add(p2); add(p3); add(p4);
         }};
 
         Transition t1 = new Transition(1, new ArrayList(){{add(1);}}, new ArrayList(){{add(2);add(3);}});
