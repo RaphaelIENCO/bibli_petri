@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         Place p1 = new Place(1,0);
-        Place p2 = new Place(1,0);
-        Place p3 = new Place(1,0);
-        Place p4 = new Place(1,0);
+        Place p2 = new Place(2,0);
+        Place p3 = new Place(3,0);
+        Place p4 = new Place(4,0);
 
 
         ArrayList<Place> listPlaces = new ArrayList(){{
